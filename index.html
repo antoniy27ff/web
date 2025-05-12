@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TECXAMAYA</title>
+  <link rel="stylesheet" href="estilos.css" />
+</head>
+<body>
+
+  <!-- Pantalla 1 -->
+  <div id="pantalla1" class="pantalla">
+    <h1>TECXAMAYA</h1>
+    <button onclick="mostrarPantalla('pantalla2')">Registrarse</button>
+    <button onclick="mostrarPantalla('pantalla3')">Iniciar sesión</button>
+  </div>
+
+  <!-- Pantalla 2 -->
+  <div id="pantalla2" class="pantalla">
+    <h2>Registro</h2>
+    <input type="text" placeholder="Nombre" />
+    <input type="email" placeholder="Correo" />
+    <input type="password" placeholder="Contraseña" />
+    <input type="password" placeholder="Verificar contraseña" />
+    <button onclick="continuarDesdeRegistro()">Continuar</button>
+    <button onclick="mostrarPantalla('pantalla1')">Regresar</button>
+  </div>
+
+  <!-- Pantalla 3 -->
+  <div id="pantalla3" class="pantalla">
+    <h2>Iniciar sesión</h2>
+    <input type="email" placeholder="Correo" />
+    <input type="password" placeholder="Contraseña" />
+    <button onclick="continuarDesdeLogin()">Acceder</button>
+    <button onclick="mostrarPantalla('pantalla1')">Regresar</button>
+  </div>
+
+  <!-- Pantalla 4 -->
+  <div id="pantalla4" class="pantalla">
+    <h2>Bienvenido a TECXAMAYA</h2>
+
+    <!-- Producto 1 -->
+    <div class="producto">
+      <img src="hamakaverde.jpg" alt="Hamaca maya artesanal verde" />
+      <p><strong>Hamaca Maya Artesanal Verde</strong></p>
+      <p>Disfruta del confort y la frescura de esta hermosa hamaca maya en tonos verdes, elaborada a mano por talentosas artesanas yucatecas que mantienen viva una tradición ancestral...</p>
+      <button class="btn-carrito" onclick="agregarAlCarrito(0)">Agregar al carrito</button>
+    </div>
+
+    <!-- Producto 2 -->
+    <div class="producto">
+      <img src="hamakamulticolor.jpg" alt="Hamaca Maya Multicolor Artesanal" />
+      <p><strong>Hamaca Maya Multicolor Artesanal</strong></p>
+      <p>Llena tus días de color y descanso con esta espectacular hamaca maya tejida a mano por artesanas yucatecas...</p>
+      <button class="btn-carrito" onclick="agregarAlCarrito(1)">Agregar al carrito</button>
+    </div>
+
+    <button onclick="cerrarSesion()">Cerrar sesión</button>
+
+    <div class="nav-inferior">
+      <button onclick="mostrarPantalla('pantalla5')">Categorías</button>
+      <button onclick="mostrarPantalla('pantalla6')">Perfil</button>
+      <button onclick="mostrarPantallaCarrito()">Carrito</button>
+    </div>
+  </div>
+
+  <!-- Pantalla 5 -->
+  <div id="pantalla5" class="pantalla">
+    <h2>Categorías</h2>
+    <p>Contenido próximamente...</p>
+    <button onclick="mostrarPantalla('pantalla4')">Regresar</button>
+  </div>
+
+  <!-- Pantalla 6 -->
+  <div id="pantalla6" class="pantalla">
+    <h2>Perfil</h2>
+    <p>Contenido próximamente...</p>
+    <button onclick="mostrarPantalla('pantalla4')">Regresar</button>
+  </div>
+
+  <!-- Pantalla 7: Carrito -->
+  <div id="pantalla7" class="pantalla">
+    <h2>Carrito de Compras</h2>
+    <div id="contenidoCarrito"></div>
+    <button onclick="mostrarPantalla('pantalla4')">Seguir comprando</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
